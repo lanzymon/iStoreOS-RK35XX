@@ -1,3 +1,20 @@
+# -----------------------------------------------------------------------------
+# 启用 Realtek 8723DU 厂商驱动 (Vendor Driver)
+# -----------------------------------------------------------------------------
+
+# 启用主驱动
+CONFIG_PACKAGE_kmod-rtl8723du=y
+
+# 启用蓝牙驱动 (二合一卡通常需要)
+CONFIG_PACKAGE_kmod-rtl8723du-bt=y
+
+# 启用固件 (必选，否则无法工作)
+CONFIG_PACKAGE_rtl8723du-firmware=y
+
+# 附带工具 (可选，用于排查)
+# CONFIG_PACKAGE_usb-modeswitch=y
+# CONFIG_PACKAGE_kmod-usb-serial=y
+
 # CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_mangopi_m28k is not set
 # CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_nlnet_xgp is not set
 # CONFIG_TARGET_DEVICE_rockchip_rk35xx_DEVICE_armsom_sige1 is not set
