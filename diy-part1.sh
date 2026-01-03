@@ -18,5 +18,3 @@ sed -i "s/OPENWRT_RELEASE.*/OPENWRT_RELEASE=\"%D %V ${date_version} by ${author}
 
 # 拉取我的软件包仓库
 echo 'src-git xmpackages https://github.com/xiaomeng9597/openwrt-packages2.git;main' >> feeds.conf.default
-# 添加该源用 rtl8723du驱动
-git clone --depth 1 https://github.com/kenzok8/small-package package/small-package
